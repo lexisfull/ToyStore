@@ -1,29 +1,34 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-public class FabricToys {
+public class FabricToys <T extends Toys> implements IFabricToys{
 
     private static Random random = new Random();
-    private static int weight = random.nextInt(1000);
+    private Toys toys;
 
 
-    List<Toys> toys = new ArrayList<>();
-    public static String getNameToys() {
-        String[] names1 = {"Gun", "Bow", "Shotgun"};
-        String[] names2 = {"Doll", "Soldier", "Dinosaur"};
-        String name = null;
-        if(weight < 500){
-            name = names1[random.nextInt(names1.length)];
+    public Toys fabricToys() {
+        int temp = random.nextInt(999);
+        int weight;
+        if(temp <= 333){
+            weight = 1;
+        } else if (temp <= 666) {
+            weight = 2;
+        }else {
+            weight = 3;
         }
-        if(weight > 500){
-            name = names2[random.nextInt(names1.length)];
+        String[] name = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
+                "Лук", "Меч", "Машина", "Вертолет", "Квадрокоптер"};
+        int id;
+        if(weight == 1){
+            id = random.nextInt(3);
+        }else if(weight == 2){
+            id = random.nextInt(6);
+        }else {
+            id = random.nextInt(9);
         }
-        return  name;
+        return new Toys(id + 1, name[id], weight);
     }
-
-
 
 }
