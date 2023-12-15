@@ -84,7 +84,9 @@
       <updated>1702618762795</updated>
       <workItem from="1702618763870" duration="7796000" />
       <workItem from="1702629498462" duration="17803000" />
-      <workItem from="1702654868820" duration="2453000" />
+      <workItem from="1702654868820" duration="7464000" />
+      <workItem from="1702663705578" duration="1684000" />
+      <workItem from="1702665433331" duration="5741000" />
     </task>
     <task id="LOCAL-00001" summary="Add model">
       <option name="closed" value="true" />
@@ -102,7 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702657250569</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add FabricToys new">
+      <option name="closed" value="true" />
+      <created>1702657395924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657395924</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Container">
+      <option name="closed" value="true" />
+      <created>1702671342242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702671342242</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +129,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add model" />
     <MESSAGE value="Add FabricToys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add FabricToys" />
+    <MESSAGE value="Add FabricToys new" />
+    <MESSAGE value="Add Container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Container" />
   </component>
 </project>

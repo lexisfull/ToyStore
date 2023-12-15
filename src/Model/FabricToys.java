@@ -5,15 +5,14 @@ import java.util.Random;
 public class FabricToys <T extends Toys> implements IFabricToys{
 
     private static Random random = new Random();
-    private Toys toys;
+    int weight;
 
 
     public Toys fabricToys() {
         int temp = random.nextInt(999);
-        int weight;
         if(temp <= 333){
             weight = 1;
-        } else if (temp <= 666) {
+        } else if (temp <= 666 && temp > 333) {
             weight = 2;
         }else {
             weight = 3;
@@ -30,5 +29,11 @@ public class FabricToys <T extends Toys> implements IFabricToys{
         }
         return new Toys(id + 1, name[id], weight);
     }
+
+    @Override
+    public int getWight() {
+        return getWight();
+    }
+
 
 }

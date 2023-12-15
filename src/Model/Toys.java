@@ -40,9 +40,9 @@ public class Toys {
 
     @Override
     public String toString() {
-        return "toy: " +
+        return "toy: ( " +
                 "id = " + id +
                 ", name = '" + name + '\'' +
-                ", weight = " + weight;
+                ", weight = " + weight + " )" + "\n";
     }
 }
