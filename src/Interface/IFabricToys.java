@@ -1,7 +1,9 @@
-package Model;
+package Interface;
+
+import Model.Toy;
 
 public interface IFabricToys {
-    Toys fabricToys();
+    Toy fabricToys();
     int getWight();
     public String getName();
 }
