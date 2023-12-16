@@ -1,17 +1,14 @@
 package Controller;
 
+import Interface.IFabricToys;
 import Model.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Controller {
-    private IFabricToys fabricToys = new FabricToys<>();
-    private IContainer container = new Container();
-    private List<Toys> toys = container.addToys(fabricToys);
+    IFabricToys fabricToys = new FabricToys<>();
+    Container container = new Container();
+    Box<Toy> toyContain = container.addToys(fabricToys);
 
-
-    public List<Toys> getToys() {
-        return toys;
+    public Box<Toy> getToyContain(){
+        return toyContain;
     }
 }

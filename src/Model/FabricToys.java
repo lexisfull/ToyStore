@@ -1,8 +1,10 @@
 package Model;
 
+import Interface.IFabricToys;
+
 import java.util.Random;
 
-public class FabricToys <T extends Toys> implements IFabricToys{
+public class FabricToys <T extends Toy> implements IFabricToys {
 
     private static Random random = new Random();
     private String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
@@ -11,8 +13,7 @@ public class FabricToys <T extends Toys> implements IFabricToys{
     private int id;
 
 
-
-    public Toys fabricToys() {
+    public Toy fabricToys() {
         int temp = random.nextInt(999);
         if(temp <= 333){
             weight = 1;
@@ -28,7 +29,7 @@ public class FabricToys <T extends Toys> implements IFabricToys{
         }else {
             id = random.nextInt(9);
         }
-        return new Toys(id + 1, names[id], weight);
+        return new Toy(id + 1, names[id], weight);
     }
 
     @Override

@@ -1,24 +1,22 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.List;
+import Interface.IContainer;
+import Interface.IFabricToys;
 
-public class Container implements IContainer{
-    IFabricToys fabricToys;
-    private List<Toys> toys = new ArrayList<>();
-    private int index;
+public class Container implements IContainer {
+    private Box<Toy> toys = new Box<>();
+
 
     @Override
-    public List<Toys> addToys(IFabricToys fabricToys) {
+    public Box<Toy> addToys(IFabricToys fabricToys) {
         for (int i = 0; i < 20; i++) {
-            index = i;
-            toys.add(fabricToys.fabricToys());
+            toys.addToys(fabricToys.fabricToys());
         }
         return toys;
     }
     @Override
     public int size(){
-        return toys.size();
+        return toys.getSize();
     }
 
 }
