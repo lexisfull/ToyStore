@@ -4,7 +4,8 @@ import Model.Box;
 import Model.Toy;
 
 public interface IContainer {
-    Box<Toy> addToys(IFabricToys fabricToys);
+    Box addToys(IFabricToys fabricToys);
+
     int size();
 
 }

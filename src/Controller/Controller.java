@@ -1,14 +1,15 @@
 package Controller;
 
+import Interface.IBox;
 import Interface.IFabricToys;
 import Model.*;
 
 public class Controller {
-    IFabricToys fabricToys = new FabricToys<>();
+    IFabricToys fabricToys = new FabricToys();
     Container container = new Container();
-    Box<Toy> toyContain = container.addToys(fabricToys);
+    Box<Toy> toys = container.addToys(fabricToys);
 
-    public Box<Toy> getToyContain(){
-        return toyContain;
+    public Box<Toy> getToys() {
+        return toys;
     }
 }

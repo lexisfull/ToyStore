@@ -1,26 +1,23 @@
 import Controller.Controller;
-import Model.*;
+import Interface.IBox;
+import Model.Box;
+import Model.Dino;
+import Model.FabricToys;
+import Model.Toy;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 
 public class Main {
     public static void main(String[] args) {
-
-//        Contain<Toy> toyContain = new Contain<>();
-//        IFabricToys fabricToys = new FabricToys<>();
-//        toyContain.addToys(fabricToys.fabricToys());
-//        System.out.println(toyContain);
         Controller controller = new Controller();
-        var toys = controller.getToyContain();
-        for (int i = 0; i < 7; i++) {
-            System.out.println(toys.getIndex(i));
-
-        }
-        System.out.println("-----------");
-        System.out.println(toys.getIndex(7).getWeight());
-        System.out.println("---------------");
-        System.out.println(toys.getIndex(7));
-        System.out.println("----------------");
-        System.out.println(toys);
+        var toy = controller.getToys();
+        System.out.println(toy);
+        Toy toy1 = new Dino(10 , "jhgjgjhg", 5);
+        Queue<Toy> queue = new PriorityQueue<>();
+        queue.add(toy1);
+        System.out.println(queue);
 
     }
 }

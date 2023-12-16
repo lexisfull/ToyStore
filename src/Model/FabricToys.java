@@ -4,40 +4,38 @@ import Interface.IFabricToys;
 
 import java.util.Random;
 
-public class FabricToys <T extends Toy> implements IFabricToys {
+// Генератор игрушек. Вместо дополнительных массивов использовал генерацию
+// что бы не усложнять программу и сделать более гибкой.
+public class FabricToys<T extends Toy> implements IFabricToys {
+    private Toy toy;
 
-    private static Random random = new Random();
-    private String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
+    private static final Random random = new Random();
+    private static final String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
             "Лук", "Меч", "Машина", "Вертолет", "Квадрокоптер"};
-    private int weight;
-    private int id;
 
+    private static int id;
+    private static int weight;
 
-    public Toy fabricToys() {
-        int temp = random.nextInt(999);
-        if(temp <= 333){
-            weight = 1;
-        } else if (temp <= 666 && temp > 333) {
-            weight = 2;
-        }else {
-            weight = 3;
-        }
-        if(weight == 1){
+    @Override
+    public Toy getToy() {
+        weight = random.nextInt(3) + 1;
+
+        if (weight == 1) {
             id = random.nextInt(3);
-        }else if(weight == 2){
+        } else if (weight == 2) {
             id = random.nextInt(6);
-        }else {
+        } else {
             id = random.nextInt(9);
         }
         return new Toy(id + 1, names[id], weight);
     }
 
     @Override
-    public int getWight() {
-        return getWight();
+    public int getWeight() {
+        return weight;
     }
 
-    public String getName(){
+    public String getName() {
         return names[id];
     }
 

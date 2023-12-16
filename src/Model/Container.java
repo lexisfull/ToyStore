@@ -4,18 +4,18 @@ import Interface.IContainer;
 import Interface.IFabricToys;
 
 public class Container implements IContainer {
+    private IFabricToys fabricToys;
     private Box<Toy> toys = new Box<>();
 
-
-    @Override
     public Box<Toy> addToys(IFabricToys fabricToys) {
         for (int i = 0; i < 20; i++) {
-            toys.addToys(fabricToys.fabricToys());
+            toys.addToys(fabricToys.getToy());
         }
         return toys;
     }
+
     @Override
-    public int size(){
+    public int size() {
         return toys.getSize();
     }
 
