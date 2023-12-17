@@ -47,7 +47,7 @@ public class CustomToy<T extends Toy> {
 
     private boolean addName() {
         System.out.println("Введите название: ");
-        String designation = scanner.nextLine();
+        String designation = scanner.next();
         return names.add(designation);
     }
 }
