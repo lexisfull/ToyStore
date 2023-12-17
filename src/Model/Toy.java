@@ -11,40 +11,21 @@ public class Toy implements Comparable<Toy>{
         this.weight = weight;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
     @Override
     public String toString() {
         return "toy: ( " +
-                "id = " + id +
-                ", name = '" + name + '\'' +
-                ", weight = " + weight + " )" + "\n";
+                "Вероятность = " + weight +
+                ", название = '" + name + '\'' +
+                ", id = " + weight + " )" + "\n";
     }
 
     @Override
-    public int compareTo(Toy o) {
-        return this.weight - o.weight;
+    public int compareTo(Toy toy) {
+        return weight - toy.weight;
     }
 }

@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -88,7 +88,8 @@
       <workItem from="1702663705578" duration="1684000" />
       <workItem from="1702665433331" duration="8540000" />
       <workItem from="1702674171341" duration="96000" />
-      <workItem from="1702700304969" duration="42309000" />
+      <workItem from="1702700304969" duration="47532000" />
+      <workItem from="1702790386967" duration="12132000" />
     </task>
     <task id="LOCAL-00001" summary="Add model">
       <option name="closed" value="true" />

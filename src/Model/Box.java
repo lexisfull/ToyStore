@@ -2,24 +2,36 @@ package Model;
 
 import Interface.IBox;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
-// Коробка для объектов типа той
-public class Box<T extends Toy> implements IBox {
+/*
+    Коробка для объектов типа Toy,
+    за основу взята PriorityQueue в соответствии с ТЗ
+ */
+public class Box implements IBox {
     private Toy toy;
     private int id;
     private int weight;
-    private List<T> toys = new ArrayList<>();
+    private Queue<Toy> toys = new PriorityQueue<>();
 
     // Добавление объекта в коробку
     public boolean addToys(Toy toy) {
-        return toys.add((T) toy);
+        return toys.add(toy);
+    }
+
+    public boolean next(){
+        return toys.isEmpty();
     }
 
     // Возвращаем индекс объекта
-    public T getIndex(int id) {
-        return toys.get(id);
+    public Toy get(){
+        return toys.poll();
+    }
+
+    public Toy delete(){
+        return toys.remove();
     }
 
     // Возвращаем размер коробки
