@@ -1,9 +1,8 @@
 package Interface;
 
-import Model.Box;
 import Model.Toy;
 
-public interface IFabricToys {
+public interface IToysFabric {
     Toy getToy();
 
     int getWeight();

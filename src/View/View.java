@@ -12,6 +12,7 @@ public class View implements IView {
     @Override
     public void fileWrite(IBox box){
         String fileName = "shop.txt";
+        String total;
         String text = "";
         while (!box.next()){
             text += box.get();
@@ -23,5 +24,6 @@ public class View implements IView {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println(text);
     }
 }

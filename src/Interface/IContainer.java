@@ -1,10 +1,7 @@
 package Interface;
 
-import Model.Box;
-import Model.Toy;
-
 public interface IContainer {
-    IBox addToys(IFabricToys fabricToys);
+    IBox addToys(IToysFabric fabricToys);
 
     int size();
 

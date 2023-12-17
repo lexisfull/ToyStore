@@ -1,12 +1,12 @@
 package Model;
 
-import Interface.IFabricToys;
+import Interface.IToysFabric;
 
 import java.util.Random;
 
 // Генератор игрушек. Вместо дополнительных массивов использовал генерацию
 // что бы не усложнять программу и сделать более гибкой.
-public class ToysFabric<T extends Toy> implements IFabricToys {
+public class ToysFabric<T extends Toy> implements IToysFabric {
 
     private static final Random random = new Random();
     private static final String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
@@ -18,7 +18,7 @@ public class ToysFabric<T extends Toy> implements IFabricToys {
     @Override
     public Toy getToy() {
         int temp = random.nextInt(100);
-
+//      Вуроятность выпадения игрушки привязана к weight.
         if (temp < 20) {
             weight = 1;
         } else if (temp < 40) {
@@ -32,7 +32,7 @@ public class ToysFabric<T extends Toy> implements IFabricToys {
         } else if (weight == 2) {
             id = random.nextInt(3, 6);
         } else {
-            id = random.nextInt(4, 9);
+            id = random.nextInt(6, 9);
         }
         return new Toy(id + 1, names[id], weight);
     }
