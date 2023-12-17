@@ -6,7 +6,7 @@ import java.util.Random;
 
 // Генератор игрушек. Вместо дополнительных массивов использовал генерацию
 // что бы не усложнять программу и сделать более гибкой.
-public class FabricToys<T extends Toy> implements IFabricToys {
+public class ToysFabric<T extends Toy> implements IFabricToys {
 
     private static final Random random = new Random();
     private static final String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
