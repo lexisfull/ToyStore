@@ -12,8 +12,8 @@ public class ToysFabric<T extends Toy> implements IToysFabric {
     private static final String[] names = {"Шарик", "Мяч резиновый", "Кубик", "Пистолет",
             "Лук", "Меч", "Машина", "Вертолет", "Квадрокоптер"};
 
-    private static int id;
-    private static int weight;
+    private int id;
+    private int weight;
 
     @Override
     public Toy getToy() {

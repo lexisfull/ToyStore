@@ -1,15 +1,15 @@
 import Controller.Controller;
+import Model.CustomToy;
 import Model.Toy;
 
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
 
 
 public class Main {
     public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.getView();
+//        Controller controller = new Controller();
+//        controller.getView();
+        CustomToy customToy = new CustomToy();
+        System.out.println(customToy.getToy());
     }
 }

@@ -12,7 +12,6 @@ public class View implements IView {
     @Override
     public void fileWrite(IBox box) {
         String fileName = "shop.txt";
-        String total;
         String text = "";
         while (!box.next()) {
             text += box.get();
