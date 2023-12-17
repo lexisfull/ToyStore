@@ -20,17 +20,18 @@ public class Box implements IBox {
     public boolean addToys(Toy toy) {
         return toys.add(toy);
     }
-//  Проверяем есть ли элеметы в очерерди. Возвращаем boolean
-    public boolean next(){
+
+    //  Проверяем есть ли элеметы в очерерди. Возвращаем boolean
+    public boolean next() {
         return toys.isEmpty();
     }
 
     // Возвращаем индекс объекта
-    public Toy get(){
+    public Toy get() {
         return toys.poll();
     }
 
-    public Toy delete(){
+    public Toy delete() {
         return toys.remove();
     }
 

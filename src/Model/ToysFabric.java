@@ -28,7 +28,7 @@ public class ToysFabric<T extends Toy> implements IToysFabric {
         }
 
         if (weight == 1) {
-            id = random.nextInt(0,3);
+            id = random.nextInt(0, 3);
         } else if (weight == 2) {
             id = random.nextInt(3, 6);
         } else {

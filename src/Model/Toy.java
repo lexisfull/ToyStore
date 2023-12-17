@@ -1,6 +1,7 @@
 package Model;
+
 // Класс игрушка. Компарабл для добавления в приоритетную очередь
-public class Toy implements Comparable<Toy>{
+public class Toy implements Comparable<Toy> {
     private int id;
     private String name;
     private int weight;
@@ -23,7 +24,8 @@ public class Toy implements Comparable<Toy>{
                 ", название = '" + name + '\'' +
                 ", id = " + weight + " )" + "\n";
     }
-//  Компаратор сортирует объект по weight
+
+    //  Компаратор сортирует объект по weight
     @Override
     public int compareTo(Toy toy) {
         return weight - toy.weight;
