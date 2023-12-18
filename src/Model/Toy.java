@@ -28,6 +28,6 @@ public class Toy implements Comparable<Toy> {
     //  Компаратор сортирует объект по weight
     @Override
     public int compareTo(Toy toy) {
-        return weight - toy.weight;
+        return toy.weight - weight;
     }
 }
