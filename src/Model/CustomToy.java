@@ -1,7 +1,5 @@
 package Model;
-import Interface.IBox;
 import Interface.ICustomToy;
-
 import java.util.*;
 
 public class CustomToy<T extends Toy> implements ICustomToy {
@@ -21,9 +19,9 @@ public class CustomToy<T extends Toy> implements ICustomToy {
         String str = "";
 
         while (!str.equals("n")) {
-            addId();
+            addId(3);
             addName();
-            addWeight();
+            addWeight(3);
 
             System.out.println("Продолжим? введите - н, если нет или любой" +
                     "другой непустой символ для продолжения");
@@ -39,17 +37,54 @@ public class CustomToy<T extends Toy> implements ICustomToy {
         return toyList;
     }
 
+    public boolean checkString(String str){
+        try {
+            Integer.parseInt(str);
+            return true;
+        }catch (NumberFormatException e){
+            return false;
+        }
+    }
 
-    private boolean addId() {
+
+    private boolean addId(int n) {
         System.out.println("Введите id: ");
-        int digit = scanner.nextInt();
+        String numeric = scanner.next();
+        int digit = 0;
+
+        if(n == 0){
+            System.out.println("Придется все делать самому!");
+            return id.add(Randomizer.random(100));
+        }
+
+        if(checkString(numeric)){
+            digit = Integer.parseInt(numeric);
+        } else {
+            System.out.println("Здесь должно быть число!");
+            addId(n -1);
+        }
+
+
         return id.add(digit);
     }
 
-    private boolean addWeight() {
+    private boolean addWeight(int n) {
         System.out.println("Введите вероятность выпадения от 1 до 3: ");
-        int mass = scanner.nextInt();
-        return weight.add(mass);
+        String mass = scanner.next();
+        int digit = 0;
+
+        if(n == 0){
+            System.out.println("Придется все делать самому!");
+            return weight.add(Randomizer.random(100));
+        }
+
+        if(checkString(mass)){
+            digit = Integer.parseInt(mass);
+        } else {
+            System.out.println("Здесь должно быть число!");
+            addWeight(n - 1);
+        }
+        return weight.add(digit);
     }
 
     private boolean addName() {

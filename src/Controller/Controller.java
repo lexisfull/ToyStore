@@ -12,8 +12,7 @@ public class Controller {
     private IContainer container = new Container();
     ICustomToy customToy = new CustomToy();
     //    Создали бокс на основе приоритетной очереди
-    private IBox box = container.addToys(fabricToys);
-    //    Экземпляр для вывода на печать
+
     private IView view = new View();
 
     public void getView() {
