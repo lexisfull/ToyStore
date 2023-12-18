@@ -7,18 +7,16 @@ import java.util.*;
 public class CustomToy<T extends Toy> implements ICustomToy {
     private static final Scanner scanner = new Scanner(System.in);
     private List<Toy> toyList = new ArrayList<>();
-    private Queue<Integer> id;
-    private Queue<String> names;
-    private Queue<Integer> weight;
+    private Queue<Integer> id = new LinkedList<>();
+    private Queue<String> names = new LinkedList<>();
+    private Queue<Integer> weight = new LinkedList<>();
     private int idToy;
     private String name;
     private int weightToy;
 
     // Генератор игрушек
     public List<Toy> getCustomToy() {
-        id = new LinkedList<>();
-        names = new LinkedList<>();
-        weight = new LinkedList<>();
+
         String str = "";
 
         while (!str.equals("нет")) {

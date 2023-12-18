@@ -16,7 +16,7 @@ public class Container implements IContainer {
         return toys;
     }
 
-    public IBox addCustomToys(ICustomToy customToy){
+    public IBox addCustomToys(ICustomToy customToy) {
         var toys = customToy.getCustomToy();
         while (!toys.isEmpty()) {
             for (int i = 0; i < toys.size(); i++) {
@@ -28,6 +28,7 @@ public class Container implements IContainer {
         System.out.println();
         return customToys;
     }
+
     @Override
     public int size() {
         return toys.getSize();

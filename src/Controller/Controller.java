@@ -15,7 +15,7 @@ public class Controller {
     private final ICustomToy customToy = new CustomToy();
     //    Создали бокс на основе приоритетной очереди
     private IBox box = new Box();
-    private  IBox box1 = new Box();
+    private IBox box1 = new Box();
 
     private final IView view = new View();
 
@@ -26,11 +26,11 @@ public class Controller {
                 "2 - 'фабричный' способ.");
         Scanner scanner = new Scanner(System.in);
         int temp = scanner.nextInt();
-        switch (temp){
-            case 2 :
+        switch (temp) {
+            case 2:
                 view.fileWrite(box1 = container.addFabricToys(fabricToys));
                 break;
-            case 1 :
+            case 1:
                 view.fileWrite(box = container.addCustomToys(customToy));
                 break;
         }
