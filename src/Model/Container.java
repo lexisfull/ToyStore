@@ -19,7 +19,7 @@ public class Container implements IContainer {
     public IBox addCustomToys(ICustomToy customToy){
         var toys = customToy.getCustomToy();
         for (int i = 0; i < toys.size(); i++) {
-            if(toys.get(i).getWeight() == Randomizer.random(toys.size())){
+            if(toys.get(i).getWeight() == Randomizer.random(100)){
                 customToys.addToys(toys.get(i));
                 toys.remove(i);
             }

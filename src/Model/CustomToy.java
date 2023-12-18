@@ -1,5 +1,7 @@
 package Model;
+
 import Interface.ICustomToy;
+
 import java.util.*;
 
 public class CustomToy<T extends Toy> implements ICustomToy {
@@ -12,6 +14,7 @@ public class CustomToy<T extends Toy> implements ICustomToy {
     private String name;
     private int weightToy;
 
+    // Генератор игрушек
     public List<Toy> getCustomToy() {
         id = new LinkedList<>();
         names = new LinkedList<>();
@@ -37,52 +40,58 @@ public class CustomToy<T extends Toy> implements ICustomToy {
         return toyList;
     }
 
-    public boolean checkString(String str){
+    // Проверка строки на число, что бы не падала программа
+    private boolean checkString(String str) {
         try {
             Integer.parseInt(str);
             return true;
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             return false;
         }
     }
 
-
+    // Метод для ввода id
     private boolean addId(int n) {
         System.out.println("Введите id: ");
         String numeric = scanner.next();
         int digit = 0;
 
-        if(n == 0){
+        if (n == 0) {
             System.out.println("Придется все делать самому!");
             return id.add(Randomizer.random(100));
         }
 
-        if(checkString(numeric)){
+        if (checkString(numeric)) {
             digit = Integer.parseInt(numeric);
         } else {
             System.out.println("Здесь должно быть число!");
-            addId(n -1);
+            addId(n - 1);// рекурсивно вызываем метод если в строке не числовое значение
         }
 
 
         return id.add(digit);
     }
 
+    //  метод для ввода вероятности
     private boolean addWeight(int n) {
         System.out.println("Введите вероятность выпадения от 1 до 3: ");
         String mass = scanner.next();
         int digit = 0;
 
-        if(n == 0){
+        if (n == 0) {
             System.out.println("Придется все делать самому!");
             return weight.add(Randomizer.random(100));
         }
 
-        if(checkString(mass)){
+        if (checkString(mass)) {
             digit = Integer.parseInt(mass);
+            if (digit > 3) {
+                System.out.println("Здесь должно быть число не более 3!");
+                addWeight(n - 1);// рекурсивно вызываем метод если в строке не числовое значение
+            }
         } else {
             System.out.println("Здесь должно быть число!");
-            addWeight(n - 1);
+            addWeight(n - 1);// рекурсивно вызываем метод если в строке не числовое значение
         }
         return weight.add(digit);
     }
