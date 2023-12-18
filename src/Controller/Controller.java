@@ -14,10 +14,10 @@ public class Controller {
     private IContainer container = new Container();
     private ICustomToy customToy = new CustomToy();
     //    Создали бокс на основе приоритетной очереди
-    private IBox box = container.addToys(fabricToys);
+    private IBox box = container.addCustomToys(customToy);
     private IView view = new View();
 
     public void getView() {
-
+        view.fileWrite(box);
     }
 }

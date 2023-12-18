@@ -45,8 +45,19 @@ public class Box implements IBox {
         return toy.getWeight();
     }
 
+//    @Override
+//    public String toString() {
+//        return String.format(toys.toString());
+//    }
+
+
     @Override
     public String toString() {
-        return String.format(toys.toString());
+        return "Box{" +
+                "toy=" + toy +
+                ", id=" + id +
+                ", weight=" + weight +
+                ", toys=" + toys +
+                '}';
     }
 }

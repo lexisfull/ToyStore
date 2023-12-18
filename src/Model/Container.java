@@ -9,7 +9,7 @@ public class Container implements IContainer {
     private IBox toys = new Box();
     private IBox customToys = new Box();
 
-    public IBox addToys(IToysFabric fabricToys) {
+    public IBox addFabricToys(IToysFabric fabricToys) {
         for (int i = 0; i < 10; i++) {
             toys.addToys(fabricToys.getToy());
         }
@@ -18,15 +18,16 @@ public class Container implements IContainer {
 
     public IBox addCustomToys(ICustomToy customToy){
         var toys = customToy.getCustomToy();
-        for (int i = 0; i < toys.size(); i++) {
-            if(toys.get(i).getWeight() == Randomizer.random(100)){
-                customToys.addToys(toys.get(i));
-                toys.remove(i);
+        while (!toys.isEmpty()) {
+            for (int i = 0; i < toys.size(); i++) {
+                if (toys.get(i).getWeight() == Randomizer.random(100)) {
+                    customToys.addToys(toys.remove(i));
+                }
             }
         }
+        System.out.println();
         return customToys;
     }
-
     @Override
     public int size() {
         return toys.getSize();

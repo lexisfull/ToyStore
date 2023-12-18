@@ -21,13 +21,13 @@ public class CustomToy<T extends Toy> implements ICustomToy {
         weight = new LinkedList<>();
         String str = "";
 
-        while (!str.equals("n")) {
+        while (!str.equals("нет")) {
             addId(3);
             addName();
             addWeight(3);
 
-            System.out.println("Продолжим? введите - н, если нет или любой" +
-                    "другой непустой символ для продолжения");
+            System.out.println("Продолжим? введите - нет, если нет \nили любой" +
+                    "другой непустой символ для продолжения: ");
             str = scanner.next();
         }
 
