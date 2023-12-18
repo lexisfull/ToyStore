@@ -1,8 +1,12 @@
 package Model;
+import Interface.IBox;
+import Interface.ICustomToy;
+
 import java.util.*;
 
-public class CustomToy<T extends Toy> {
+public class CustomToy<T extends Toy> implements ICustomToy {
     private static final Scanner scanner = new Scanner(System.in);
+    private List<Toy> toyList = new ArrayList<>();
     private Queue<Integer> id;
     private Queue<String> names;
     private Queue<Integer> weight;
@@ -10,7 +14,7 @@ public class CustomToy<T extends Toy> {
     private String name;
     private int weightToy;
 
-    public Toy getToy() {
+    public List<Toy> getCustomToy() {
         id = new LinkedList<>();
         names = new LinkedList<>();
         weight = new LinkedList<>();
@@ -21,7 +25,8 @@ public class CustomToy<T extends Toy> {
             addName();
             addWeight();
 
-            System.out.println("Продолжим? д/н");
+            System.out.println("Продолжим? введите - н, если нет или любой" +
+                    "другой непустой символ для продолжения");
             str = scanner.next();
         }
 
@@ -29,11 +34,13 @@ public class CustomToy<T extends Toy> {
             idToy = id.poll();
             name = names.poll();
             weightToy = weight.poll();
+            toyList.add(new Toy(idToy, name, weightToy));
         }
-        return new Toy(idToy, name, weightToy);
+        return toyList;
     }
 
-    private boolean addId() throws NumberFormatException{
+
+    private boolean addId() {
         System.out.println("Введите id: ");
         int digit = scanner.nextInt();
         return id.add(digit);

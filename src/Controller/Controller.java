@@ -1,9 +1,6 @@
 package Controller;
 
-import Interface.IBox;
-import Interface.IContainer;
-import Interface.IToysFabric;
-import Interface.IView;
+import Interface.*;
 import Model.*;
 import View.View;
 
@@ -13,12 +10,13 @@ public class Controller {
     private IToysFabric fabricToys = new ToysFabric();
     //    Упаковка в бокс
     private IContainer container = new Container();
+    ICustomToy customToy = new CustomToy();
     //    Создали бокс на основе приоритетной очереди
     private IBox box = container.addToys(fabricToys);
     //    Экземпляр для вывода на печать
     private IView view = new View();
 
     public void getView() {
-        view.fileWrite(box);
+        view.fileWrite(container.addCustomToys(customToy));
     }
 }
