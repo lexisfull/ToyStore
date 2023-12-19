@@ -1,7 +1,7 @@
 package Model;
 
 import java.util.Random;
-
+//Рандомайзер
 public class Randomizer {
     private static Random random = new Random();
 

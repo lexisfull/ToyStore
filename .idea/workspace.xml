@@ -23,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -106,7 +111,7 @@
       <workItem from="1702790386967" duration="33466000" />
       <workItem from="1702847859528" duration="1007000" />
       <workItem from="1702885319056" duration="35326000" />
-      <workItem from="1702930599224" duration="1545000" />
+      <workItem from="1702930599224" duration="2947000" />
     </task>
     <task id="LOCAL-00001" summary="Add model">
       <option name="closed" value="true" />
@@ -188,11 +193,30 @@
       <option name="project" value="LOCAL" />
       <updated>1702931594569</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final">
+      <option name="closed" value="true" />
+      <created>1702932304876</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702932304876</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add model" />
@@ -203,6 +227,7 @@
     <MESSAGE value="Final Custom" />
     <MESSAGE value="final metod" />
     <MESSAGE value="add ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ui" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
   </component>
 </project>
