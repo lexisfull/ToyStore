@@ -65,7 +65,6 @@ public class CustomToy<T extends Toy> implements ICustomToy {
             System.out.println("Здесь должно быть число!");
             addId(n - 1);// рекурсивно вызываем метод если в строке не числовое значение
         }
-
         return id.add(digit);
     }
 

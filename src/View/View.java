@@ -16,6 +16,7 @@ public class View implements IView {
         while (!box.next()) {
             text += box.get();
         }
+
         try {
             Writer myWriter = new FileWriter(fileName, true);
             myWriter.write(text + "\n");

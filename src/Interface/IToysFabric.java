@@ -8,4 +8,5 @@ public interface IToysFabric {
     int getWeight();
 
     public String getName();
+
 }

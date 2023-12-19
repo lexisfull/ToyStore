@@ -12,6 +12,7 @@ public class Toy implements Comparable<Toy> {
         this.weight = weight;
     }
 
+
     public int getWeight() {
         return weight;
     }

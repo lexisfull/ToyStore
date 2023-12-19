@@ -19,7 +19,6 @@ public class Controller {
 
     private final IView view = new View();
 
-
     public void getView() {
         System.out.println("Выберите способ\n" +
                 "1 - вручную ввести данные,\n" +

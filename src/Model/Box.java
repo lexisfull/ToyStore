@@ -45,6 +45,7 @@ public class Box implements IBox {
         return toy.getWeight();
     }
 
+
     @Override
     public String toString() {
         return "Box{" +
