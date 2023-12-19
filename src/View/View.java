@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
+
 public class View implements IView {
     @Override
     public void fileWrite(IBox box) {
