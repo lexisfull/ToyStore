@@ -27,7 +27,7 @@ public class Controller {
         Scanner scanner = new Scanner(System.in);
         String temp = scanner.next();
         int result = 0;
-        if(checkString(temp) || result > 2) {
+        if(checkString(temp) || result > 3) {
             result = Integer.parseInt(temp);
             switch (result) {
                 case 2:
