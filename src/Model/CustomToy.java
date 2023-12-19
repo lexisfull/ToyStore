@@ -39,7 +39,7 @@ public class CustomToy<T extends Toy> implements ICustomToy {
     }
 
     // Проверка строки на число, что бы не падала программа
-    private boolean checkString(String str) {
+    private static boolean checkString(String str) {
         try {
             Integer.parseInt(str);
             return true;
