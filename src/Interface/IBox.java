@@ -14,4 +14,5 @@ public interface IBox<T> {
     boolean addToys(Toy toy);
 
     boolean next();
+
 }

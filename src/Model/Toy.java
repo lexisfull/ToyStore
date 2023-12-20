@@ -12,6 +12,7 @@ public class Toy implements Comparable<Toy> {
         this.weight = weight;
     }
 
+
     public int getWeight() {
         return weight;
     }
@@ -22,7 +23,7 @@ public class Toy implements Comparable<Toy> {
         return "toy: ( " +
                 "Вероятность = " + weight +
                 ", название = '" + name + '\'' +
-                ", id = " + weight + " )" + "\n";
+                ", id = " + id + " )" + "\n";
     }
 
     //  Компаратор сортирует объект по weight

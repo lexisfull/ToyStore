@@ -6,5 +6,4 @@ public interface IContainer {
     IBox addFabricToys(IToysFabric fabricToys);
 
     int size();
-
 }

@@ -26,7 +26,8 @@ public class Box implements IBox {
         return toys.isEmpty();
     }
 
-    // Возвращаем индекс объекта
+    // Возвращает и удаляет объект, либо null
+
     public Toy get() {
         return toys.poll();
     }
@@ -44,6 +45,7 @@ public class Box implements IBox {
     public int getWeight() {
         return toy.getWeight();
     }
+
 
     @Override
     public String toString() {
